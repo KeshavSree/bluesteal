@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --accent: #8a2be2;
+            --accent-light: #a45deb;
+            --accent-dark: #5a189a;
+            --text-primary: #f0f0f0;
+            --text-secondary: #b0b0b0;
+            --border: #333;
+            --rank-gold: #ffd700;
+            --rank-silver: #c0c0c0;
+            --rank-bronze: #cd7f32;
+            --success: #4caf50;
+            --error: #f44336;
+            --player1: #ff6b6b;
+            --player2: #4d96ff;
+            --random-map: #9b5de5;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #2a0a4a 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 40px 20px;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-out;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(to right, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: linear-gradient(to right, var(--accent), var(--accent-light));
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-alt {
+            background: var(--accent-dark);
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Leaderboard styles */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .leaderboard {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border);
+        }
+
+        .leaderboard-header {
+            display: grid;
+            grid-template-columns: 80px 1fr 150px;
+            padding: 20px 25px;
+            background: rgba(138, 43, 226, 0.1);
+            border-bottom: 1px solid var(--border);
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .player-row {
+            display: grid;
+            grid-template-columns: 80px 1fr 150px;
+            padding: 18px 25px;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+            animation: slideIn 0.5s ease-out;
+            animation-fill-mode: backwards;
+        }
+
+        .player-row:hover {
+            background: rgba(138, 43, 226, 0.05);
+            transform: translateX(5px);
+        }
+
+        .rank {
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .rank-1 .rank { color: var(--rank-gold); }
+        .rank-2 .rank { color: var(--rank-silver); }
+        .rank-3 .rank { color: var(--rank-bronze); }
+
+        .player-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #5e17eb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .player-name {
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .player-elo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--accent-light);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .last-updated {
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* Match History Styles */
+        .week-selector {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .week-dropdown {
+            background: var(--accent-dark);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        .matches-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .match-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .match-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .week-label {
+            background: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .players {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.3rem;
+            font-weight: 600;
+            flex-grow: 1;
+            min-width: 250px;
+        }
+
+        .player1-name {
+            color: var(--player1);
+            text-align: right;
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-right: 10px;
+        }
+
+        .player2-name {
+            color: var(--player2);
+            text-align: left;
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-left: 10px;
+        }
+
+        .vs {
+            margin: 0 5px;
+            color: var(--text-secondary);
+            flex-shrink: 0;
+        }
+
+        .match-score {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 15px 0;
+            background: rgba(138, 43, 226, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .player-score {
+            min-width: 50px;
+        }
+
+        .player1-score {
+            color: var(--player1);
+        }
+
+        .player2-score {
+            color: var(--player2);
+        }
+
+        .score-divider {
+            color: var(--text-secondary);
+        }
+
+        .maps-container {
+            margin-top: 10px;
+            flex-grow: 1;
+        }
+
+        .map-row {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.5fr;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            gap: 10px;
+        }
+
+        .map-row:last-child {
+            border-bottom: none;
+        }
+
+        .map-name {
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            overflow: hidden;
+        }
+
+        .map-name span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .random-map {
+            color: var(--random-map);
+        }
+
+        .map-scores {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .map-player1-score {
+            color: var(--player1);
+            font-weight: 600;
+            min-width: 30px;
+            text-align: right;
+        }
+
+        .map-player2-score {
+            color: var(--player2);
+            font-weight: 600;
+            min-width: 30px;
+            text-align: left;
+        }
+
+        .map-winner {
+            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .player1-win {
+            background: rgba(255, 107, 107, 0.2);
+            color: var(--player1);
+            text-align: right;
+        }
+
+        .player2-win {
+            background: rgba(77, 150, 255, 0.2);
+            color: var(--player2);
+            text-align: left;
+        }
+
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background: var(--success);
+            color: white;
+        }
+
+        .notification.error {
+            background: var(--error);
+        }
+
+        .notification.show {
+            opacity: 1;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes cardAppear {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .stats {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .player-name {
+                font-size: 1rem;
+            }
+
+            .leaderboard-header, .player-row {
+                grid-template-columns: 50px 1fr 100px;
+                padding: 15px;
+            }
+
+            .player-elo {
+                font-size: 1rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .matches-container {
+                grid-template-columns: 1fr;
+            }
+
+            .map-row {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .player-info {
+                gap: 10px;
+            }
+
+            .avatar {
+                width: 38px;
+                height: 38px;
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .players {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .player1-name, .player2-name {
+                text-align: center;
+                padding: 0;
+            }
+
+            .map-row {
+                grid-template-columns: 1.2fr 1fr 1.2fr;
+                font-size: 0.9rem;
+            }
+
+            .map-winner {
+                font-size: 0.8rem;
+            }
+
+            .match-score {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h1>Tournament Dashboard</h1>
+            <p class="subtitle">Track player rankings and match history throughout the tournament</p>
+
+            <div class="navigation">
+                <button class="btn" id="leaderboardBtn">
+                    <i class="fas fa-list-ol"></i> Leaderboard
+                </button>
+                <button class="btn btn-alt" id="matchesBtn">
+                    <i class="fas fa-history"></i> Match History
+                </button>
+            </div>
+        </header>
+
+        <!-- Leaderboard Page -->
+        <div id="leaderboardPage" class="page active">
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="highest-elo">-</div>
+                    <div class="stat-label">Highest ELO</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="average-elo">-</div>
+                    <div class="stat-label">Average ELO</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="total-players">-</div>
+                    <div class="stat-label">Total Players</div>
+                </div>
+            </div>
+
+            <div class="leaderboard">
+                <div class="leaderboard-header">
+                    <div>Rank</div>
+                    <div>Player</div>
+                    <div class="elo">ELO Rating</div>
+                </div>
+
+                <div id="leaderboard-content">
+                    <div class="player-row">
+                        <div class="rank">1</div>
+                        <div class="player-info">
+                            <div class="avatar">L</div>
+                            <div class="player-name">Loading leaderboard...</div>
+                        </div>
+                        <div class="player-elo">0</div>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    Showing the top 50 players • Updated automatically from leaderboard.txt
+                    <div class="last-updated">Last updated: <span id="update-time">-</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Match History Page -->
+        <div id="matchesPage" class="page">
+            <div class="week-selector">
+                <select id="weekDropdown" class="week-dropdown">
+                    <option value="1">Week 1</option>
+                    <option value="2">Week 2</option>
+                    <option value="3">Week 3</option>
+                    <option value="4">Week 4</option>
+                    <option value="5">Week 5</option>
+                    <option value="6">Week 6</option>
+                    <option value="7">Week 7</option>
+                    <option value="8">Week 8</option>
+                    <option value="9">Week 9</option>
+                    <option value="10">Week 10</option>
+                    <option value="11">Week 11</option>
+                </select>
+            </div>
+
+            <div id="matchesContainer" class="matches-container">
+                <!-- Match cards will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span>Match history loaded successfully!</span>
+    </div>
+
+    <script>
+        // Global data stores
+        let leaderboardData = [];
+        let matchesData = [];
+
+        // DOM Elements
+        const leaderboardPage = document.getElementById('leaderboardPage');
+        const matchesPage = document.getElementById('matchesPage');
+        const leaderboardBtn = document.getElementById('leaderboardBtn');
+        const matchesBtn = document.getElementById('matchesBtn');
+        const weekDropdown = document.getElementById('weekDropdown');
+        const matchesContainer = document.getElementById('matchesContainer');
+        const notification = document.getElementById('notification');
+        const leaderboardContent = document.getElementById('leaderboard-content');
+        const highestElo = document.getElementById('highest-elo');
+        const averageElo = document.getElementById('average-elo');
+        const totalPlayers = document.getElementById('total-players');
+        const updateTime = document.getElementById('update-time');
+
+        // Navigation
+        leaderboardBtn.addEventListener('click', () => {
+            leaderboardPage.classList.add('active');
+            matchesPage.classList.remove('active');
+            leaderboardBtn.classList.remove('btn-alt');
+            matchesBtn.classList.add('btn-alt');
+        });
+
+        matchesBtn.addEventListener('click', () => {
+            matchesPage.classList.add('active');
+            leaderboardPage.classList.remove('active');
+            matchesBtn.classList.remove('btn-alt');
+            leaderboardBtn.classList.add('btn-alt');
+            // Load matches if not already loaded
+            if (matchesData.length === 0) {
+                loadMatches();
+            } else {
+                renderMatches(1); // Render week 1 by default
+            }
+        });
+
+        weekDropdown.addEventListener('change', (e) => {
+            const week = parseInt(e.target.value);
+            renderMatches(week);
+        });
+
+        // Function to load and process leaderboard data
+        function loadLeaderboard() {
+            fetch('leaderboard.txt?t=' + new Date().getTime())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load leaderboard data');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    processLeaderboardData(data);
+                    updateTime.textContent = new Date().toLocaleString();
+                    showNotification('Leaderboard updated successfully!');
+                })
+                .catch(error => {
+                    console.error('Error loading leaderboard:', error);
+                    showNotification('Error loading leaderboard data', true);
+                });
+        }
+
+        function processLeaderboardData(textData) {
+            const lines = textData.trim().split('\n');
+            const players = [];
+
+            // Parse each line
+            for (const line of lines) {
+                const [name, elo] = line.split(',');
+                if (name && !isNaN(parseFloat(elo))) {
+                    players.push({
+                        name: name.trim(),
+                        elo: parseFloat(elo)
+                    });
+                }
+            }
+
+            // Sort players by ELO (descending)
+            players.sort((a, b) => b.elo - a.elo);
+            leaderboardData = players;
+
+            // Take top 50 players
+            const topPlayers = players.slice(0, 50);
+
+            // Render the leaderboard
+            renderLeaderboard(topPlayers);
+
+            // Update stats
+            updateStats(players, topPlayers);
+        }
+
+        // Function to update statistics
+        function updateStats(allPlayers, topPlayers) {
+            // Highest ELO
+            const highestEloValue = topPlayers.length > 0 ? Math.max(...topPlayers.map(p => p.elo)) : 0;
+            highestElo.textContent = highestEloValue;
+
+            // Average ELO of top players
+            const averageEloValue = topPlayers.length > 0
+                ? Math.round(topPlayers.reduce((sum, player) => sum + player.elo, 0) / topPlayers.length)
+                : 0;
+            averageElo.textContent = averageEloValue;
+
+            // Total players
+            totalPlayers.textContent = allPlayers.length;
+        }
+
+        // Function to render the leaderboard
+        function renderLeaderboard(players) {
+            leaderboardContent.innerHTML = '';
+
+            if (players.length === 0) {
+                leaderboardContent.innerHTML = `
+                    <div class="player-row">
+                        <div class="rank">-</div>
+                        <div class="player-info">
+                            <div class="avatar">!</div>
+                            <div class="player-name">No player data found</div>
+                        </div>
+                        <div class="player-elo">-</div>
+                    </div>
+                `;
+                return;
+            }
+
+            players.forEach((player, index) => {
+                const row = document.createElement('div');
+                row.className = `player-row rank-${index + 1}`;
+
+                // Create avatar initial
+                const avatarInitial = player.name.charAt(0).toUpperCase();
+
+                row.innerHTML = `
+                    <div class="rank">${index + 1}</div>
+                    <div class="player-info">
+                        <div class="avatar">${avatarInitial}</div>
+                        <div class="player-name">${player.name}</div>
+                    </div>
+                    <div class="player-elo">${player.elo}</div>
+                `;
+
+                // Add staggered animation delay
+                row.style.animationDelay = `${index * 0.03}s`;
+
+                leaderboardContent.appendChild(row);
+            });
+        }
+
+        // Function to load matches data
+        function loadMatches() {
+            fetch('matches.txt?t=' + new Date().getTime())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load matches data');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    processMatchesData(data);
+                    renderMatches(1); // Render week 1 by default
+                    showNotification('Matches data loaded successfully!');
+                })
+                .catch(error => {
+                    console.error('Error loading matches:', error);
+                    showNotification('Error loading matches data', true);
+                });
+        }
+
+        function processMatchesData(textData) {
+    const lines = textData.trim().split('\n');
+    const matches = [];
+    let currentMatch = null;
+
+    for (const line of lines) {
+        // Skip empty lines
+        if (line.trim() === '') continue;
+
+        // Check if line is a match header (starts with week number)
+        const headerPattern = /^\d+,[^,]+,[^,]+$/;
+        if (headerPattern.test(line)) {
+            // If we have a current match in progress, save it to the matches array
+            if (currentMatch) {
+                matches.push(currentMatch);
+            }
+
+            // Create a new match object
+            const [week, player1, player2] = line.split(',');
+            currentMatch = {
+                week: parseInt(week),
+                player1: player1.trim(),
+                player2: player2.trim(),
+                maps: []  // Reset maps for the new match
+            };
+        }
+        // Otherwise it's a map line - only process if we have a current match
+        else if (currentMatch) {
+            const parts = line.split(',');
+            if (parts.length === 3) {
+                const [map, score1, score2] = parts;
+                // Only add if we have valid scores
+                if (!isNaN(score1) && !isNaN(score2)) {
+                    currentMatch.maps.push({
+                        name: map.trim(),
+                        score1: parseInt(score1),
+                        score2: parseInt(score2)
+                    });
+                }
+            }
+        }
+    }
+
+    // Push the last match after processing all lines
+    if (currentMatch) {
+        matches.push(currentMatch);
+    }
+
+    matchesData = matches;
+    console.log('Parsed matches:', matchesData.length, 'matches found');
+}
+
+        function renderMatches(week) {
+            matchesContainer.innerHTML = '';
+
+            const weekMatches = matchesData.filter(match => match.week === week);
+
+            if (weekMatches.length === 0) {
+                matchesContainer.innerHTML = `
+                    <div class="match-card">
+                        <div class="match-header">
+                            <div class="week-label">Week ${week}</div>
+                            <div class="players">
+                                No matches found
+                            </div>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            weekMatches.forEach((match, index) => {
+                // Calculate scores
+                let player1Wins = 0;
+                let player2Wins = 0;
+
+                match.maps.forEach(map => {
+                    if (map.score1 > map.score2) player1Wins++;
+                    else if (map.score2 > map.score1) player2Wins++;
+                });
+
+                const matchCard = document.createElement('div');
+                matchCard.className = 'match-card';
+                matchCard.style.animation = `cardAppear 0.5s ${index * 0.1}s forwards`;
+                matchCard.style.opacity = 0;
+
+                // Build map rows
+                let mapRows = '';
+                match.maps.forEach((map, mapIndex) => {
+                    const isPlayer1Win = map.score1 > map.score2;
+                    const isPlayer2Win = map.score2 > map.score1;
+                    const isRandomMap = mapIndex === 4; // 5th map is random
+
+                    mapRows += `
+                        <div class="map-row">
+                            <div class="map-name ${isRandomMap ? 'random-map' : ''}">
+                                <i class="fas ${isRandomMap ? 'fa-dice' : 'fa-user'}"></i>
+                                <span>${map.name}</span>
+                            </div>
+                            <div class="map-scores">
+                                <span class="map-player1-score">${map.score1}</span>
+                                <span>-</span>
+                                <span class="map-player2-score">${map.score2}</span>
+                            </div>
+                            <div class="map-winner ${isPlayer1Win ? 'player1-win' : ''} ${isPlayer2Win ? 'player2-win' : ''}">
+                                ${isPlayer1Win ? match.player1 : (isPlayer2Win ? match.player2 : 'Tie')}
+                            </div>
+                        </div>
+                    `;
+                });
+
+                matchCard.innerHTML = `
+                    <div class="match-header">
+                        <div class="week-label">Week ${match.week}</div>
+                        <div class="players">
+                            <span class="player1-name">${match.player1}</span>
+                            <span class="vs">vs</span>
+                            <span class="player2-name">${match.player2}</span>
+                        </div>
+                    </div>
+
+                    <div class="match-score">
+                        <span class="player-score player1-score">${player1Wins}</span>
+                        <span class="score-divider">-</span>
+                        <span class="player-score player2-score">${player2Wins}</span>
+                    </div>
+
+                    <div class="maps-container">
+                        ${mapRows}
+                    </div>
+                `;
+
+                matchesContainer.appendChild(matchCard);
+            });
+        }
+
+        // Function to show notification
+        function showNotification(message, isError = false) {
+            notification.innerHTML = `<i class="fas ${isError ? 'fa-exclamation-circle' : 'fa-check-circle'}"></i>
+                                     <span>${message}</span>`;
+
+            notification.className = 'notification';
+            if (isError) {
+                notification.classList.add('error');
+            }
+            notification.classList.add('show');
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Initial load
+        loadLeaderboard();
+        loadMatches();
+
+        // Auto-refresh every 60 seconds
+        setInterval(loadLeaderboard, 60000);
+    </script>
+</body>
+</html>
