@@ -9,7 +9,7 @@
   ],
   "build": {
     "env": {
-      "MAINTENANCE_MODE": "@maintenance_mode"
+      "MAINTENANCE_MODE": "$MAINTENANCE_MODE"
     }
   }
 }
