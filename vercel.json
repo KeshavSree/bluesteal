@@ -1,15 +1,17 @@
 {
   "routes": [
     {
+      "src": "/.*",
+      "middlewarePath": "middleware.js"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/maintenance.html",
-      "status": 503,
-      "continue": false
+      "dest": "/index.html"
     }
   ],
   "build": {
     "env": {
-      "MAINTENANCE_MODE": "@maintenance_mode"
+      "MAINTENANCE_MODE": "$MAINTENANCE_MODE"
     }
   }
 }
