@@ -1,0 +1,15 @@
+{
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/maintenance.html",
+      "status": 503,
+      "continue": false
+    }
+  ],
+  "build": {
+    "env": {
+      "MAINTENANCE_MODE": "@maintenance_mode"
+    }
+  }
+}
