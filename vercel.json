@@ -3,13 +3,7 @@
     {
       "src": "/(.*)",
       "dest": "/maintenance.html",
-      "status": 503,
-      "continue": false
+      "status": 503
     }
-  ],
-  "build": {
-    "env": {
-      "MAINTENANCE_MODE": "$MAINTENANCE_MODE"
-    }
-  }
+  ]
 }
