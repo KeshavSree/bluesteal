@@ -648,7 +648,6 @@
 
                 <div class="footer">
                      • Made by ohSauce • Ignore the site title •
-                    <div class="last-updated">Last updated: <span id="update-time">-</span></div>
                 </div>
             </div>
         </div>
@@ -1073,5 +1072,9 @@
         // Auto-refresh every 10 minutes
         setInterval(loadLeaderboard, 600000);
     </script>
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
