@@ -215,6 +215,23 @@
             justify-content: center;
             font-weight: bold;
             font-size: 1.2rem;
+            overflow: hidden;
+            position: relative;
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .avatar span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .player-name {
@@ -656,17 +673,13 @@
         <div id="matchesPage" class="page">
             <div class="week-selector">
                 <select id="weekDropdown" class="week-dropdown">
-                    <option value="1">Week 1</option>
-                    <option value="2">Week 2</option>
-                    <option value="3">Week 3</option>
-                    <option value="4">Week 4</option>
-                    <option value="5">Week 5</option>
-                    <option value="6">Week 6</option>
-                    <option value="7">Week 7</option>
-                    <option value="8">Week 8</option>
-                    <option value="9">Week 9</option>
-                    <option value="10">Week 10</option>
-                    <option value="11">Week 11</option>
+                    <option value="1">Swiss Week 1</option>
+                    <option value="2">Swiss Week 2</option>
+                    <option value="3">Swiss Week 3</option>
+                    <option value="4">Swiss Week 4</option>
+                    <option value="5">Swiss Week 5</option>
+                    <option value="6">Swiss Week 6</option>
+                    <option value="7">Playoff bracket coming soon!</option>
                 </select>
             </div>
 
@@ -828,11 +841,17 @@
 
                 // Create avatar initial
                 const avatarInitial = player.name.charAt(0).toUpperCase();
+                const avatarImagePath = `avatars/${player.name}.png`; // Change extension if needed
 
                 row.innerHTML = `
                     <div class="rank">${index + 1}</div>
                     <div class="player-info">
-                        <div class="avatar">${avatarInitial}</div>
+                        <div class="avatar">
+                            <img src="${avatarImagePath}" alt="${player.name}"
+                                 onerror="this.style.display='none';
+                                          this.nextElementSibling.style.display='flex'">
+                            <span style="display: none">${avatarInitial}</span>
+                        </div>
                         <div class="player-name">${player.name}</div>
                     </div>
                     <div class="player-elo">${player.elo}</div>
