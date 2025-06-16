@@ -1,0 +1,16 @@
+1,Ignas,Enzone
+Maximo Center,203,68
+Marble it Up,135,68
+Spires,130,30
+1,Voltage,Elementlover
+Gem Finding Folly,178,60
+Treasure Box,298,79
+Hunting Around,102,31
+1,Wilchz,plazma
+Hunting Around,93,50
+Gems Ahoy,141,96
+King of the Marble,122,67
+1,Jacob,Keigo
+Treasure Box,236,160
+Spires,111,72
+Maximo Center,173,129
