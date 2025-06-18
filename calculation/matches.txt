@@ -6,7 +6,7 @@ Spires,130,30
 Gem Finding Folly,178,60
 Treasure Box,298,79
 Hunting Around,102,31
-1,Wilchz,plazma
+1,Wilchz,Plazma
 Hunting Around,93,50
 Gems Ahoy,141,96
 King of the Marble,122,67
