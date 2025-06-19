@@ -26,3 +26,23 @@ Duplex,182,77
 Blast Club,102,61
 Playground,146,80
 Triple Trail,99,45
+1,ShadowVisions,eNetro
+Sprawl,228,67
+Blast Club,147,62
+Treasure Box,302,68
+1,Nockess,Zigglflig
+Cube Isle,159,56
+Ziggurat,82,54
+Treasure Box,310,66
+1,Eguy,Porter
+King of the Marble,126,62
+Treasure Box,274,63
+Marble Agility Course,119,55
+1,bobirika12,Platoxide
+Sprawl,187,79
+Citadel,131,52
+Tilo,128,106
+1,Endy,ohSauce
+Acropolis 2,185,107
+Hunting Around,91,53
+Cragmire,158,84
