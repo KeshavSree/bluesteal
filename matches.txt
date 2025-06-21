@@ -30,7 +30,7 @@ Triple Trail,99,45
 Sprawl,228,67
 Blast Club,147,62
 Treasure Box,302,68
-1,Nockess,Zigglflig
+1,Nockess,Ziggleflig
 Cube Isle,159,56
 Ziggurat,82,54
 Treasure Box,310,66
@@ -79,3 +79,16 @@ KOTM,98,25
 Acropolis 2,224,73
 KOTM,111,60
 Treasure Box,304,71
+1,Robert,Kalle29
+Points of the Radar,102,115
+Maximo Center,145,125
+Treasure Box,230,74
+Eye of the Storm,79,64
+1,Jean,BlueSock
+Inferno Ring,125,47
+Gem Finding Folly,156,87
+Treasure Box,245,118
+1,LaSharkus,husemat
+Maximo Center,191,75
+Treasure Box,216,120
+Sprawl,190,88
