@@ -538,19 +538,6 @@
                 gap: 25px;
             }
 
-            .player-name {
-                font-size: 1rem;
-                /* Proactively prevents long player names from overflowing */
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            .leaderboard-header, .player-row {
-                grid-template-columns: 50px 1fr 100px 70px !important;
-                padding: 15px;
-            }
-
             h1 {
                 font-size: 2.2rem;
             }
@@ -559,26 +546,65 @@
                 grid-template-columns: 1fr;
             }
 
+            /* --- NEW FLEXBOX LAYOUT FOR LEADERBOARD --- */
+            .leaderboard-header, .player-row {
+                /* Switch from Grid to Flexbox */
+                display: flex;
+                align-items: center;
+                gap: 10px; /* Adds consistent spacing */
+                padding: 15px;
+            }
+
+            /* Define sizes for each column in the flex row */
+            .leaderboard-header > div,
+            .player-row > div {
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            /* Column 1: Rank */
+            .leaderboard-header > div:nth-child(1),
+            .player-row > .rank {
+                flex: 0 0 35px; /* Does not grow, does not shrink, 35px wide */
+                justify-content: center;
+            }
+
+            /* Column 2: Player Info */
+            .leaderboard-header > div:nth-child(2),
+            .player-row > .player-info {
+                flex: 1 1 auto; /* This is the flexible column that will grow and shrink */
+                min-width: 0; /* CRITICAL: Allows the element to shrink and ellipsis to work */
+            }
+
+            /* Column 3: ELO Rating */
+            .leaderboard-header > div:nth-child(3),
+            .player-row > .player-elo {
+                flex: 0 0 70px; /* Fixed width for ELO */
+                justify-content: center;
+                padding-right: 0; /* Remove old padding */
+            }
+
+            /* Column 4: Rank Change */
+            .leaderboard-header > div:nth-child(4),
+            .player-row > .rank-change {
+                flex: 0 0 50px; /* Fixed width for the arrow */
+                justify-content: center;
+                padding-right: 0; /* Remove old padding */
+            }
+
+            /* Ensure long names truncate properly within the flex container */
+            .player-name {
+                font-size: 1rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            /* Old map-row style - still valid */
             .map-row {
                 grid-template-columns: 1fr 1fr 1fr;
             }
-
-            /* --- FIXES START HERE --- */
-            .player-elo {
-                /* Removes the large right padding that causes overlap on mobile */
-                padding-right: 0;
-                /* Centers the ELO rating within its column */
-                justify-content: center;
-                text-align: center;
-            }
-
-            .rank-change {
-                /* Removes the padding that pushes the arrows off-screen */
-                padding-right: 0;
-                /* Ensures the arrows are perfectly centered in their column */
-                justify-content: center;
-            }
-            /* --- FIXES END HERE --- */
         }
 
         @media (max-width: 480px) {
