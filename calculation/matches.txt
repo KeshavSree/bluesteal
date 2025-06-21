@@ -6,7 +6,7 @@ Spires,130,30
 Gem Finding Folly,178,60
 Treasure Box,298,79
 Hunting Around,102,31
-1,Wilchz,Plazma
+1,Wilchz,plazma
 Hunting Around,93,50
 Gems Ahoy,141,96
 King of the Marble,122,67
@@ -26,3 +26,44 @@ Duplex,182,77
 Blast Club,102,61
 Playground,146,80
 Triple Trail,99,45
+1,ShadowVisions,eNetro
+Sprawl,228,67
+Blast Club,147,62
+Treasure Box,302,68
+1,Nockess,Ziggleflig
+Cube Isle,159,56
+Ziggurat,82,54
+Treasure Box,310,66
+1,Eguy,Porter
+King of the Marble,126,62
+Treasure Box,274,63
+Marble Agility Course,119,55
+1,bobirika12,Platoxide
+Sprawl,187,79
+Citadel,131,52
+Tilo,128,106
+1,Endy,ohSauce
+Acropolis 2,185,107
+Hunting Around,91,53
+Cragmire,158,84
+1,serjG,A-Game
+Promontory,90,114
+Par Pit,110,122
+Gems in the Road,108,102
+Sweep,136,119
+King of the Marble,87,103
+1,MBOUltimate,TheFarmersWife
+King of the Marble,124,77
+Battlecube,72,48
+King of the Ring,139,104
+1,theturk1234,Yoshicraft224
+Treasure Box,235,146
+Eye of the Storm,86,91
+Prophetic,174,116
+Ramps Revamped,183,125
+1,subtract,Eurobeater
+Points of the Radar,121,113
+Treasure Box,179,183
+Requisite,90,113
+Apex,89,147
+END

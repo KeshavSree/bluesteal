@@ -25,7 +25,7 @@ A-Game,987
 Eurobeater,979
 Yoshicraft224,925
 Platoxide,925
-Plazma,911
+plazma,911
 Kalle29,895
 ohSauce,895
 husemat,893

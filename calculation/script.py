@@ -19,29 +19,40 @@ def read_matches():
             match = (x[0],x[1],x[2],x[3])
             matches.append(match)
 
-def calculate_match_elos(person1: str, person2: str, p1score: int, p2score: int, elo_dict: Dict[str, int]):
+def calculate_match_elos(person1: str, person2: str, p1score: int, p2score: int, elo_dict: Dict[str, int], difference: bool):
+
+    #-----------CONFIG-------------------#
+    overall_multiplier = 80
+    score_significance_multiplier= -3.4
+    elo_significance_modifier = 400
+    #------------------------------------#
+
     p1_elo = elo_dict[person1]
     p2_elo = elo_dict[person2]
 
-    q1 = math.pow(10, (p1_elo/400)) #elo significance modifier
-    q2 = math.pow(10, (p2_elo/400))
+    old_p1_elo = p1_elo
+    old_p2_elo = p2_elo
+
+    q1 = math.pow(10, (p1_elo/elo_significance_modifier)) #elo significance modifier
+    q2 = math.pow(10, (p2_elo/elo_significance_modifier))
 
     expected_value1 = q1/(q1+q2)
 
-    actual_value1 = 1/(1+math.pow(math.e, -4.4 * ((p1score-p2score) / p2score))) #score significance modifier
+    actual_value1 = 1/(1+math.pow(math.e, score_significance_multiplier * ((p1score-p2score) / p2score))) #score significance modifier
 
     expected_value2 = 1 - expected_value1
     actual_value2 = 1 - actual_value1
+
 
 
     if (actual_value1 - expected_value1) <= 0: #if player 1 did worse than expected
         if actual_value1 >= 0.5: #if player 1 won the game
             pass
         else: # if player 1 lost the game
-            p1_elo = p1_elo + 100 * (actual_value1 - expected_value1) #overall modifier
+            p1_elo = p1_elo + overall_multiplier * (actual_value1 - expected_value1) #overall modifier
     else: #if player 1 did better than expected
         if actual_value1 > 0.5: #if player 1 won the game
-            p1_elo = p1_elo + 100 * (actual_value1 - expected_value1)
+            p1_elo = p1_elo + overall_multiplier * (actual_value1 - expected_value1)
         else: #if player 1 lost the game
             pass
 
@@ -50,16 +61,23 @@ def calculate_match_elos(person1: str, person2: str, p1score: int, p2score: int,
         if actual_value2 >= 0.5: #if player 2 won or tied the game
             pass
         else: # if player 2 lost the game
-            p2_elo = p2_elo + 100 * (actual_value2 - expected_value2)
+            p2_elo = p2_elo + overall_multiplier * (actual_value2 - expected_value2)
     else: #if player 2 did better than expected
         if actual_value2 > 0.5: #if player 2 won or tied the game
-            p2_elo = p2_elo + 100 * (actual_value2 - expected_value2)
+            p2_elo = p2_elo + overall_multiplier * (actual_value2 - expected_value2)
         else: #if player 2 lost the game
             pass
 
 
     elo_dict[person1] = round(p1_elo)
     elo_dict[person2] = round(p2_elo)
+
+    if difference:
+        p1_diff = round(p1_elo - old_p1_elo)
+        p2_diff = round(p2_elo - old_p2_elo)
+
+        return p1_diff,p2_diff
+    return None
 
 
 if __name__ == '__main__':
