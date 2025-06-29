@@ -89,7 +89,7 @@ if __name__ == '__main__':
     print("Before: " + str(elo_dict))
     i = 1
     for match in matches:
-        calculate_match_elos(match[0],match[1],int(match[2]),int(match[3]), elo_dict)
+        calculate_match_elos(match[0],match[1],int(match[2]),int(match[3]), elo_dict, True)
 
         print("After match " + str(i) + ": " + str(elo_dict)) #for individual elo changes
         i += 1
