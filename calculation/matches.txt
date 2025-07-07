@@ -1,96 +1,100 @@
-2,Ziggleflig,Yoshicraft224
-Gems Ahoy,104,136
-KOTR,108,115
-Lupus,52,156
-2,Red_zone,Ggjakub
-Cragmire,147,65
-Acropolis 2,127,97
-Playground,145,88
-2,HerrZealous,ohSauce
-KOTM,88,95
-Basin Hill,68,105
-Citadel,68,71
-2,Frostfire,Powerjohn25
-Blast Club,135,99
-Maximo Center,189,140
-Cube Isle,132,88
-2,TheFarmersWife,plazma
-Skate Park Square,73,130
-Core,85,76
-Marble City,100,136
-KOTM,102,98
-Playground,104,136
-2,Jacob,A-Game
-Battlecube,60,74
-Basin Hill,172,110
-Eye of the Storm,111,102
-Platinum Construction Co.,141,122
-2,Connie,Endy
-Apex,156,152
-Gems Ahoy,122,144
-Prophetic,171,150
-Skate Park Square,113,105
-2,Kwill,pasta_real
-Marbleland,113,52
-Skatium,175,106
-Acropolis 2,215,90
-2,Nockess,theturk1234
-Horizon,122,108
-Skatium,161,154
-King of the Marble,99,102
-Fun in the Sun,109,103
-2,MBOUltimate,Wilchz
-Playground,149,122
-Cascade Falls,137,89
-Fun in the Sun,109,103
-2,Kalle29,Elementlover
-Hunting Around,85,46
-Platinum Construction Co.,136,64
-Concentric,112,58
-2,Ignas,bobirika12
-Parkour Peaks,122,88
-Platinum Construction Co,144,143
-Nadir,127,125
-Eye of the Storm,115,97
-2,Mazik,Jaxx
-Skate Park Square,120,101
-Platinum Construction Co.,167,97
-Terrace Tundra,131,81
-2,Platoxide,Enzone
-Maximo Center,161,96
-Skatium,168,108
-Duplex,161,51
-2,Voltage,Robert
-Fun in the Sun,138,77
-Prophetic,191,135
-All Angles,86,64
-2,Eguy,LaSharkus
-Cube Isle,142,121
-Sprawl,216,112
-Battlecube Revisited,167,118
-2,husemat,Porter
-KOTM,110,67
-Playground,118,83
-Cascade Falls,105,69
-2,serjG,Keigo
-Skate Battle Royale,98,107
-Terrace Tundra,116,100
-Skate Park Square,116,97
-Treasure Box,174,176
-Sweep,122,123
-2,Xedron,Jean
-Hunting Around,69,77
-Marble City,108,136
-Ramps Revamped,128,144
-2,ShadowVisions,Eurobeater
-Bowl,144,105
-Cascade Falls,123,80
-Sprawl,183,102
-2,BlueSock,Deathlora
-Triple Decker,132,16
-Basin Hill,143,8
-Acropolis 2,193,24
-2,subtract,eNetro
+3,Voltage,Jacob
+Skatium,179,154
+Marble City,155,118
+Eye of the Storm,94,112
+Playground,130,106
+3,pasta_real,Elementlover
+Skatium,120,138
+Hunting Around,77,53
+Fun in the Sun,82,98
+All Angles,85,49
+Triple Trail,67,75
+3,Frostfire,Ignas
+Parkour Peaks,100,116
+Maximo Center,175,127
+Sacred,94,95
+Prophetic,198,139
+Triumvirate,112,95
+3,Yoshicraft224,serjG
+Gems in the Road,89,113
+Sweep,88,163
+Hunting Around,87,113
+3,Xedron,Keigo
+Battlecube,65,49
+All Angles,86,63
+KOTM,112,93
+3,bobirika12,Kalle29
+Fun in the Sun,120,74
+Prophetic,171,54
+Tilo,122,110
+3,Wilchz,ohSauce
+Hunting Around,53,78
+Triple Trail,106,42
+KOTM,98,87
+Marble City,146,86
+3,LaSharkus,BlueSock
+Parkour Peaks,106,56
+Marble Agility Course,82,46
+Spires,105,44
+3,Ziggleflig,Porter
+Parkour Peaks,54,38
+Cascade Falls,82,52
+Spires,75,31
+3,Jaxx,A-Game
+Nadir,116,122
+Triple Decker,117,115
+Blast Club,108,118
+Marble Agility Course,76,97
+3,MBOUltimate,Mazik
+All Angles,69,62
+Triple Trail,87,94
+Outlook,118,98
+Inferno Ring,105,117
+Par Pit,87,90
+3,theturk1234,plazma
+Cube Isle,155,93
+Treasure Box,226,147
+Terrace Tundra,130,66
+3,Eurobeater,Platoxide
+Duplex,127,117
+Tilo,154,79
+Horizon,125,88
+3,Connie,ShadowVisions
+Skatium,154,161
+Triple Decker,121,105
+Citadel,107,108
+Acropolis 2,182,123
+Bowl,104,121
+3,Jean,Powerjohn25
+Gems in the Road,121,95
+Fun in the Sun,117,82
+Battlecube,62,50
+3,husemat,Robert
+Bowl,82,128
+Horizon,71,169
+Cragmire,117,134
+3,Endy,Red_zone
+Duplex,152,77
+Treasure Box,233,111
+Terrace Tundra,128,98
+3,Enzone,Ggjakub
+Hunting Around,72,54
+Triple Decker,84,83
+Marble it Up,87,84
+3,TheFarmersWife,Deathlora
+Maximo Center,146,14
+Cube Isle,125,27
+Hunting Around,68,20
+3,thearst3rd,subtract
+Basin Hill,143,96
+Marble It Up,133,90
+Skatium,153,132
+3,Eguy,Nockess
+Triple Trail,109,85
+Vibrancy Grounds,91,117
+Spires,112,96
+King of the Marble,96,87
+3,HerrZealous,eNetro
 N/A,150,100
 N/A,150,100
 N/A,150,100
