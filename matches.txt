@@ -391,3 +391,105 @@ Prophetic,146,76
 Citadel,66,77
 Treasure Box,219,133
 Architecture,130,101
+5,Powerjohn25,Enzone
+Epicenter,132,95
+Skatium,171,101
+Battlecube,87,26
+5,eNetro,Deathlora
+KOTR,130,22
+Pyramid,130,7
+Ziggurat,96,31
+5,Ziggleflig,HerrZealous
+Ziggurat,64,74
+Treasure Box,126,140
+Fun in the Sun,91,78
+Duplex,88,114
+5,pasta_real,TheFarmersWife
+Cube Isle,95,96
+Eye of the Storm,105,38
+Bowl,110,99
+Sweep,120,107
+5,Jaxx,Kalle29
+Maximo Center,169,127
+Epicenter,127,130
+Marble City,130,117
+Fun in the Sun,112,108
+5,Xedron,Ignas
+Pyramid,97,125
+Architecture,181,92
+Basin Hill,132,141
+Apex,150,145
+Duplex,155,127
+5,Robert,subtract
+Battlecube,61,58
+Horizon,146,113
+Basin Hill,126,111
+5,Frostfire,Connie
+Nadir,117,115
+Marble City,141,119
+Eye of the Storm,103,100
+5,Mazik,Endy
+Sacred,106,121
+Fun in the Sun,97,101
+Triple Trail,105,86
+Vortex Effect,108,107
+Bowl,122,130
+5,Yoshicraft224,Platoxide
+Sprawl,177,124
+Cragmire,133,138
+Skatium,151,139
+Sacred,92,95
+Lupus,110,94
+5,serjG,Wilchz
+Sprawl,139,157
+Terrace Tundra,96,118
+Vortex Effect,125,100
+Zenith,103,110
+5,Eguy,MBOUltimate
+Basin Hill,152,129
+Platinum Construction Co.,162,155
+Sweep,138,151
+Zenith,136,149
+Tilo,131,126
+5,Jacob,Nockess
+Platinum Construction Co.,140,165
+Skate Park Square,99,126
+Basin Hill,136,138
+5,Keigo,husemat
+Spires,84,56
+Triple Decker,137,94
+Core,83,75
+5,Jean,A-Game
+Bowl,118,108
+Marble City,135,112
+Eye of the Storm,93,102
+Fun in the Sun,88,71
+5,Porter,plazma
+Marble Agility Course,61,102
+Gems Ahoy,60,162
+Cascade Falls,64,112
+Ggjakub,Elementlover
+Tilo,52,90
+Terrace Tundra,76,79
+Triple Decker,83,100
+5,LaSharkus,thearst3rd
+Triple Decker,142,103
+Horizon,111,107
+Cascade Falls,136,97
+5,bobirika12,BlueSock
+Prophetic,197,77
+Eye of the Storm,105,66
+Treasure Box,268,116
+5,Eurobeater,ohSauce
+Cube Isle,92,125
+Eye of the Storm,78,61
+Sweep,148,121
+5,theturk1234,Red_zone
+Architecture,149,102
+Requisite,98,81
+Marble City,148,106
+
+
+
+
+
