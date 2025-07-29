@@ -1,104 +1,105 @@
-5,Powerjohn25,Enzone
-Epicenter,132,95
-Skatium,171,101
-Battlecube,87,26
-5,eNetro,Deathlora
-KOTR,130,22
-Pyramid,130,7
-Ziggurat,96,31
-5,Ziggleflig,HerrZealous
-Ziggurat,64,74
-Treasure Box,126,140
-Fun in the Sun,91,78
-Duplex,88,114
-5,pasta_real,TheFarmersWife
-Cube Isle,95,96
-Eye of the Storm,105,38
-Bowl,110,99
-Sweep,120,107
-5,Jaxx,Kalle29
-Maximo Center,169,127
-Epicenter,127,130
-Marble City,130,117
-Fun in the Sun,112,108
-5,Xedron,Ignas
-Pyramid,97,125
-Architecture,181,92
-Basin Hill,132,141
-Apex,150,145
-Duplex,155,127
-5,Robert,subtract
-Battlecube,61,58
-Horizon,146,113
-Basin Hill,126,111
-5,Frostfire,Connie
-Nadir,117,115
-Marble City,141,119
-Eye of the Storm,103,100
-5,Mazik,Endy
-Sacred,106,121
-Fun in the Sun,97,101
-Triple Trail,105,86
-Vortex Effect,108,107
-Bowl,122,130
-5,Yoshicraft224,Platoxide
-Sprawl,177,124
-Cragmire,133,138
-Skatium,151,139
-Sacred,92,95
-Lupus,110,94
-5,serjG,Wilchz
-Sprawl,139,157
-Terrace Tundra,96,118
-Vortex Effect,125,100
-Zenith,103,110
-5,Eguy,MBOUltimate
-Basin Hill,152,129
-Platinum Construction Co.,162,155
-Sweep,138,151
-Zenith,136,149
-Tilo,131,126
-5,Jacob,Nockess
-Platinum Construction Co.,140,165
-Skate Park Square,99,126
-Basin Hill,136,138
-5,Keigo,husemat
-Spires,84,56
-Triple Decker,137,94
-Core,83,75
-5,Jean,A-Game
-Bowl,118,108
-Marble City,135,112
-Eye of the Storm,93,102
-Fun in the Sun,88,71
-5,Porter,plazma
-Marble Agility Course,61,102
-Gems Ahoy,60,162
-Cascade Falls,64,112
-5,Ggjakub,Elementlover
-Tilo,52,90
-Terrace Tundra,76,79
-Triple Decker,83,100
-5,LaSharkus,thearst3rd
-Triple Decker,142,103
-Horizon,111,107
-Cascade Falls,136,97
-5,bobirika12,BlueSock
-Prophetic,197,77
-Eye of the Storm,105,66
-Treasure Box,268,116
-5,Eurobeater,ohSauce
-Cube Isle,92,125
-Eye of the Storm,78,61
-Sweep,148,121
-5,theturk1234,Red_zone
-Architecture,149,102
-Requisite,98,81
-Marble City,148,106
-5,ShadowVisions,Voltage
-Skate Battle Royale,110,76
-Skate Park Square,115,129
-Cube Isle,111,98
-Cragmire,97,113
-Pyramid,38,20
+6,ShadowVisions,Frostfire
+Points of the Radar,91,83
+Architecture,110,170
+Platinum Construction Co,144,113
+Prophetic,146,150
+Horizon,94,99
+6,Eguy,Voltage
+N/A,125,100
+N/A,125,100
+N/A,125,100
+6,Jean,Nockess
+Hunting Around,71,56
+Architecture,100,124
+Nadir,107,91
+Skate Park Square,108,134
+6,Xedron,Endy
+Horizon,129,135
+Cragmire,149,127
+Treasure Box,208,195
+Nadir,132,142
+Parkour Peaks,130,122
+6,Connie,A-Game
+Vibrancy Grounds,114,116
+Sprawl,147,146
+Treasure Box,171,172
+Playground,128,122
+Concentric,97,119
+6,Ignas,Robert
+Sweep,146,139
+Pyramid,129,108
+Skate Park Square,121,136
+Sacred,125,71
+6,Jacob,Wilchz
+Terrace Tundra,103,131
+Acropolis 2,144,177
+Eye of the Storm,83,91
+6,Mazik,bobirika12
+Maximo Center,99,132
+Skatium,132,160
+Architecture,129,130
+6,MBOUltimate,theturk1234
+Marble City,136,139
+Horizon,133,103
+KOTM,115,103
+Acropolis 2,149,148
+6,LaSharkus,Keigo
+Ramps Revamped,100,111
+Treasure Box,174,158
+Hunting Around,65,66
+Maximo Center,120,140
+6,Eurobeater,Jaxx
+Par Pit,85,109
+Skate Park Square,94,126
+Vortex Effect,84,123
+6,Deathlora,Enzone
+KOTM,22,101
+Fun in the Sun,17,128
+Marble Agility Course,21,102
+6,eNetro,pasta_real
+Parkour Peaks,56,78
+Platinum Construction Co,111,109
+Spires,73,74
+Vibrancy Grounds,91,102
+6,TheFarmersWife,Ziggleflig
+Vibrancy Grounds,70,80
+KOTM,99,85
+Requisite,90,58
+Horizon,87,76
+6,Porter,Ggjakub
+Triple Decker,74,112
+Parkour Peaks,68,36
+Acropolis 2,97,105
+Gems in the Road,71,72
+6,Platoxide,Elementlover
+Triple Trail,86,69
+Gems in the Road,78,80
+Terrace Tundra,123,35
+Eye of the Storm,91,41
+6,Powerjohn25,husemat
+KOTM,108,97
+Maximo Center,175,132
+Ramps Revamped,153,117
+6,serjG,HerrZealous
+Points of the Radar,134,62
+Sweep,147,91
+Triple Trail,105,40
+6,thearst3rd,Red_zone
+Promontory,114,106
+Duplex,149,88
+Terrace Tundra,115,94
+6,BlueSock,plazma
+Marble Agility Course,83,88
+Eye of the Storm,81,49
+Citadel,51,107
+Spires,53,86
+6,ohSauce,Yoshicraft224
+Core,67,99
+Sweep,127,122
+Platinum Construction Co,99,138
+Cascade Falls,100,109
+6,Kalle29,subtract
+Skatium,166,144
+Sacred,114,71
+Cascade Falls,105,99
 END

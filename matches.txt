@@ -488,8 +488,110 @@ Sweep,148,121
 Architecture,149,102
 Requisite,98,81
 Marble City,148,106
-
-
+6,ShadowVisions,Frostfire
+Points of the Radar,91,83
+Architecture,110,170
+Platinum Construction Co,144,113
+Prophetic,146,150
+Horizon,94,99
+6,Eguy,Voltage
+N/A,125,100
+N/A,125,100
+N/A,125,100
+6,Jean,Nockess
+Hunting Around,71,56
+Architecture,100,124
+Nadir,107,91
+Skate Park Square,108,134
+6,Xedron,Endy
+Horizon,129,135
+Cragmire,149,127
+Treasure Box,208,195
+Nadir,132,142
+Parkour Peaks,130,122
+6,Connie,A-Game
+Vibrancy Grounds,114,116
+Sprawl,147,146
+Treasure Box,171,172
+Playground,128,122
+Concentric,97,119
+6,Ignas,Robert
+Sweep,146,139
+Pyramid,129,108
+Skate Park Square,121,136
+Sacred,125,71
+6,Jacob,Wilchz
+Terrace Tundra,103,131
+Acropolis 2,144,177
+Eye of the Storm,83,91
+6,Mazik,bobirika12
+Maximo Center,99,132
+Skatium,132,160
+Architecture,129,130
+6,MBOUltimate,theturk1234
+Marble City,136,139
+Horizon,133,103
+KOTM,115,103
+Acropolis 2,149,148
+6,LaSharkus,Keigo
+Ramps Revamped,100,111
+Treasure Box,174,158
+Hunting Around,65,66
+Maximo Center,120,140
+6,Eurobeater,Jaxx
+Par Pit,85,109
+Skate Park Square,94,126
+Vortex Effect,84,123
+6,Deathlora,Enzone
+KOTM,22,101
+Fun in the Sun,17,128
+Marble Agility Course,21,102
+6,eNetro,pasta_real
+Parkour Peaks,56,78
+Platinum Construction Co,111,109
+Spires,73,74
+Vibrancy Grounds,91,102
+6,TheFarmersWife,Ziggleflig
+Vibrancy Grounds,70,80
+KOTM,99,85
+Requisite,90,58
+Horizon,87,76
+6,Porter,Ggjakub
+Triple Decker,74,112
+Parkour Peaks,68,36
+Acropolis 2,97,105
+Gems in the Road,71,72
+6,Platoxide,Elementlover
+Triple Trail,86,69
+Gems in the Road,78,80
+Terrace Tundra,123,35
+Eye of the Storm,91.41
+6,Powerjohn25,husemat
+KOTM,108,97
+Maximo Center,175,132
+Ramps Revamped,153,117
+6,serjG,HerrZealous
+Points of the Radar,134,62
+Sweep,147,91
+Triple Trail,105,40
+6,thearst3rd,Red_zone
+Promontory,114,106
+Duplex,149,88
+Terrace Tundra,115,94
+6,BlueSock,plazma
+Marble Agility Course,83,88
+Eye of the Storm,81,49
+Citadel,51,107
+Spires,53,86
+6,ohSauce,Yoshicraft224
+Core,67,99
+Sweep,127,122
+Platinum Construction Co,99,138
+Cascade Falls,100,109
+6,Kalle29,subtract
+Skatium,166,144
+Sacred,114,71
+Cascade Falls,105,99
 
 
 
