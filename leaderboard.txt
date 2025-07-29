@@ -1,6 +1,6 @@
 Frostfire,1423.0
 Xedron,1375.0
-Eguy,1359.0
+Eguy,1339.0
 ShadowVisions,1348.5
 Endy,1288.5
 bobirika12,1278.0
