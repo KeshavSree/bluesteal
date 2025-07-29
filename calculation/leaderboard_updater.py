@@ -53,7 +53,7 @@ if __name__ == "__main__":
 
     wl_dict = calculate_wins("matches.txt")
 
-    base_multiplier = 1.5
+    base_multiplier = 1
     print("BASE ELO GAINS")
     for player,diff in wl_dict.items():
         if diff == 1:
@@ -65,6 +65,9 @@ if __name__ == "__main__":
         if diff == 3:
             elo_dict[player] += 36 * base_multiplier
             print(player + ": " + str(36 * base_multiplier))
+        if diff == 3:
+            elo_dict[player] += 39 * base_multiplier
+            print(player + ": " + str(39 * base_multiplier))
         if diff == -1:
             elo_dict[player] += -5 * base_multiplier
             print(player + ": " + str(-5 * base_multiplier))
@@ -74,6 +77,9 @@ if __name__ == "__main__":
         if diff == -3:
             elo_dict[player] += -15 * base_multiplier
             print(player + ": " + str(-15 * base_multiplier))
+        if diff == -4:
+            elo_dict[player] += -20 * base_multiplier
+            print(player + ": " + str(-20 * base_multiplier))
         round(elo_dict[player])
 
 

@@ -592,6 +592,65 @@ Cascade Falls,100,109
 Skatium,166,144
 Sacred,114,71
 Cascade Falls,105,99
-
+7,Connie,theturk1234
+Sprawl,154,164
+Citadel,135,55
+Marble City,129,121
+Nadir,125,116
+Treasure Box,173,180
+Eye of the Storm,96,86
+7,MBOUltimate,Eurobeater
+N/A,125,100
+N/A,125,100
+N/A,125,100
+N/A,125,100
+7,A-Game,LaSharkus
+Maximo Center,145,166
+Eye of the Storm,104,100
+Marbleland,70,115
+Marble Agility Course,94,82
+Gems Ahoy,110,123
+Battlecube,61,55
+Outlook,114,85
+7,Jaxx,thearst3rd
+Sprawl,138,159
+Sweep,148,118
+Marble It Up,95,120
+Duplex,109,116
+Horizon,87,112
+7,serjG,Kalle29
+Epicenter,118,139
+Sweep,148,85
+Skate Battle Royale,99,91
+Gems in the Road,107,100
+Tilo,103,123
+Vortex Effect,111,102
+7,bobirika12,Yoshicraft224
+Ramps Revamped,183,118
+Spires,105,60
+KOTR,121,97
+Battlecube Revisited,167,102
+7,Endy,Robert
+Skate Park Square,127,96
+Marble City,138,124
+Triple Trail,104,83
+Terrace Tundra,143,99
+7,Keigo,Mazik
+Triple Trail,79,91
+Skatium,156,154
+Sprawl,131,179
+Bowl,56,157
+Treasure Box,165,187
+7,Jean,plazma
+Gems Ahoy,151,98
+Nadir,131,110
+Citadel,125,75
+Vortex Effect,132,87
+7,Wilchz,Powerjohn25
+Hunting Around,76,62
+Triple Trail,84,90
+Skatium,173,119
+Apex,125,100
+Duplex,147,128
 
 
