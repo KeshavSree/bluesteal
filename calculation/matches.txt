@@ -1,68 +1,48 @@
-7,Connie,theturk1234
-Sprawl,154,164
-Citadel,135,55
-Marble City,129,121
-Nadir,125,116
-Treasure Box,173,180
-Eye of the Storm,96,86
-7,Ignas,Jacob
-Parkour Peaks,108,112
-Megas,123,100
-Spires,105,89
-Cragmire,125,129
-Core,115,89
-Requisite,108,104
-7,MBOUltimate,Eurobeater
-N/A,125,100
-N/A,125,100
-N/A,125,100
-N/A,125,100
-7,A-Game,LaSharkus
-Maximo Center,145,166
-Eye of the Storm,104,100
-Marbleland,70,115
-Marble Agility Course,94,82
-Gems Ahoy,110,123
-Battlecube,61,55
-Outlook,114,85
-7,Jaxx,thearst3rd
-Sprawl,138,159
-Sweep,148,118
-Marble It Up,95,120
-Duplex,109,116
-Horizon,87,112
-7,serjG,Kalle29
-Epicenter,118,139
-Sweep,148,85
-Skate Battle Royale,99,91
-Gems in the Road,107,100
-Tilo,103,123
-Vortex Effect,111,102
-7,bobirika12,Yoshicraft224
-Ramps Revamped,183,118
-Spires,105,60
-KOTR,121,97
-Battlecube Revisited,167,102
-7,Endy,Robert
-Skate Park Square,127,96
-Marble City,138,124
-Triple Trail,104,83
-Terrace Tundra,143,99
-7,Keigo,Mazik
-Triple Trail,79,91
-Skatium,156,154
-Sprawl,131,179
-Bowl,56,157
-Treasure Box,165,187
-7,Jean,plazma
-Gems Ahoy,151,98
-Nadir,131,110
-Citadel,125,75
-Vortex Effect,132,87
-7,Wilchz,Powerjohn25
-Hunting Around,76,62
-Triple Trail,84,90
-Skatium,173,119
-Apex,125,100
-Duplex,147,128
+8,Frostfire,Connie
+Skate Park Square,131,137
+Sprawl,186,140
+Epicenter,156,127
+Marble City,157,128
+Nadir,121,120
+8,Ignas,MBOUltimate
+Basin Hill,143,147
+Ziggurat,80,96
+Pyramid,110,104
+Skatium,146,168
+Eye of the Storm,83,99
+8,Xedron,A-Game
+Pyramid,97,86
+Prophetic,187,134
+Vibrancy Grounds,109,104
+Architecture,126,134
+Ziggurat,81,79
+8,ShadowVisions,thearst3rd
+Terrace Tundra,144,90
+Megas,136,75
+Maximo Center,184,87
+Duplex,154,89
+8,Eguy,serjG
+Sweep,127,128
+Sprawl,151,117
+Eye of the Storm,95,80
+Marble City,137,112
+Vortex Effect,117,88
+8,bobirika12,Endy
+Gems Ahoy,103,150
+Megas,113,94
+Apex,120,133
+Zenith,126,96
+Skate Battle Royale,96,88
+Prophetic,161,130
+8,Nockess,Mazik
+Citadel,121,89
+Core,86,108
+Nadir,99,102
+Skate Park Sqaure,110,115
+Treasure Box,139,195
+8,Jean,Wilchz
+Ramps Revamped,160,144
+Apex,152,115
+Vortex Effect,111,81
+Gem Finding Folly,134,80
 END
