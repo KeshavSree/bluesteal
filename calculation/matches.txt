@@ -1,48 +1,30 @@
-8,Frostfire,Connie
-Skate Park Square,131,137
-Sprawl,186,140
-Epicenter,156,127
-Marble City,157,128
-Nadir,121,120
-8,Ignas,MBOUltimate
-Basin Hill,143,147
-Ziggurat,80,96
-Pyramid,110,104
-Skatium,146,168
-Eye of the Storm,83,99
-8,Xedron,A-Game
-Pyramid,97,86
-Prophetic,187,134
-Vibrancy Grounds,109,104
-Architecture,126,134
-Ziggurat,81,79
-8,ShadowVisions,thearst3rd
-Terrace Tundra,144,90
-Megas,136,75
-Maximo Center,184,87
-Duplex,154,89
-8,Eguy,serjG
-Sweep,127,128
-Sprawl,151,117
-Eye of the Storm,95,80
-Marble City,137,112
-Vortex Effect,117,88
-8,bobirika12,Endy
-Gems Ahoy,103,150
-Megas,113,94
-Apex,120,133
-Zenith,126,96
-Skate Battle Royale,96,88
-Prophetic,161,130
-8,Nockess,Mazik
-Citadel,121,89
-Core,86,108
-Nadir,99,102
-Skate Park Sqaure,110,115
-Treasure Box,139,195
-8,Jean,Wilchz
-Ramps Revamped,160,144
-Apex,152,115
-Vortex Effect,111,81
-Gem Finding Folly,134,80
+9,Frostfire,MBOUltimate
+All Angles,86,78
+Treasure Box,248,191
+Battlecube,66,69
+Megas,146,91
+Concentric,86,97
+Cascade Falls,113,117
+Skate Park Square,130,118
+9,Xedron,ShadowVisions
+Hunting Around,60,70
+Prophetic,160,123
+Points of the Radar,112,127
+Skatium,161,153
+Cascade Falls,107,110
+Ramps Revamped,142,147
+9,Eguy,bobirika12
+Battlecube,64,75
+Cascade Falls,111,110
+Blast Club,77,89
+Vortex Effect,86,105
+Battlecube Revisted,136,134
+Basin Hill,174,109
+Platinum Construction Co.,121,155
+9,Mazik,Jean
+Cascade Falls,85,84
+Battlecube,59,55
+Prophetic,131,140
+Par Pit,101,92
+Spires,101,87
 END
