@@ -1,8 +1,8 @@
-Frostfire,1493
-ShadowVisions,1451
+ShadowVisions,1503
+Frostfire,1454
 Xedron,1416
-Mazik,1388
-bobirika12,1368
+Mazik,1406
+bobirika12,1383
 Eguy,1366
 MBOUltimate,1361
 Jean,1337

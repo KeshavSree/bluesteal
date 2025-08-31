@@ -1,30 +1,12 @@
-9,Frostfire,MBOUltimate
-All Angles,86,78
-Treasure Box,248,191
-Battlecube,66,69
-Megas,146,91
-Concentric,86,97
-Cascade Falls,113,117
-Skate Park Square,130,118
-9,Xedron,ShadowVisions
-Hunting Around,60,70
-Prophetic,160,123
-Points of the Radar,112,127
-Skatium,161,153
-Cascade Falls,107,110
-Ramps Revamped,142,147
-9,Eguy,bobirika12
-Battlecube,64,75
-Cascade Falls,111,110
-Blast Club,77,89
-Vortex Effect,86,105
-Battlecube Revisted,136,134
-Basin Hill,174,109
-Platinum Construction Co.,121,155
-9,Mazik,Jean
-Cascade Falls,85,84
-Battlecube,59,55
-Prophetic,131,140
-Par Pit,101,92
-Spires,101,87
+10,bobirika12,Mazik
+Citadel,106,108
+Skatium,134,139
+Triple Trail,71,84
+Skate Battle Royale,103,112
+10,Frostfire,ShadowVisions
+Points of the Radar,105,96
+Architecture,142,148
+Blast Club,76,82
+Prophetic,132,177
+Platinum Construction Co.,117,139
 END
