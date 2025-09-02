@@ -3,10 +3,4 @@ Citadel,106,108
 Skatium,134,139
 Triple Trail,71,84
 Skate Battle Royale,103,112
-10,Frostfire,ShadowVisions
-Points of the Radar,105,96
-Architecture,142,148
-Blast Club,76,82
-Prophetic,132,177
-Platinum Construction Co.,117,139
 END
