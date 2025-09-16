@@ -1,10 +1,10 @@
-ShadowVisions,1503
-Frostfire,1454
-Mazik,1452
+ShadowVisions,1565
+Frostfire,1490
 Xedron,1416
-bobirika12,1363
+Mazik,1412
 Eguy,1366
 MBOUltimate,1361
+bobirika12,1349
 Jean,1337
 Nockess,1289
 Connie,1275

@@ -1,6 +1,15 @@
-10,bobirika12,Mazik
-Citadel,106,108
-Skatium,134,139
-Triple Trail,71,84
-Skate Battle Royale,103,112
+11,ShadowVisions,Mazik
+Vortex Effect,112,107
+Pyramid,87,78
+Sprawl,143,159
+Platinum Construction Co.,156,110
+Maximo Center,148,90
+Sweep,119,99
+11,Frostfire,bobirika12
+Battlecube Revisited,167,135
+Marble City,142,131
+Bowl,122,116
+Zenith,114,126
+Battlecube,70,61
+Citadel,113,111
 END
